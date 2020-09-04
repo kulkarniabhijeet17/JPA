@@ -1,0 +1,3 @@
+One to One: Accounts and Cards
+create table accounts_tbl (account_number number(12) primary key, account_type varchar(15) NOT NULL);
+create table cards_tbl (card_number number(19) primary key, card_type varchar(3) NOT NULL, expiration_date timestamp NOT NULL, cvv_number number(3), pin number(6), account_number number(12) not null unique, constraint cards_fk foreign key (account_number) references accounts_tbl(account_number));
