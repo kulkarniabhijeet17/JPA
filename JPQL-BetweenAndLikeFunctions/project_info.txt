@@ -1,0 +1,5 @@
+create table user_info_tbl(user_id varchar2(15), first_name varchar2(30), last_name varchar2(30), middle_initial char(1), dob varchar2(10), email_id varchar2(30), constraint user_info_pk primary key (user_id));
+
+insert into user_info_tbl (USER_ID,FIRST_NAME,LAST_NAME,MIDDLE_INITIAL,DOB,EMAIL_ID) values ('Abhijeet24','Abhijeet','Kulkarni','R','27/11/1989','kulkarniabhijeet17@gmail.com');
+insert into user_info_tbl (USER_ID,FIRST_NAME,LAST_NAME,MIDDLE_INITIAL,DOB,EMAIL_ID) values ('Saurav08','Saurav','Ganguly','C','08/07/1973','scganguly@gmail.com');
+insert into user_info_tbl (USER_ID,FIRST_NAME,LAST_NAME,MIDDLE_INITIAL,DOB,EMAIL_ID) values ('Rahul10','Rahul','Dravid','S','10/01/1973','rsdravid@gmail.com');
