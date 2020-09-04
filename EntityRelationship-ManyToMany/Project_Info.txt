@@ -1,0 +1,4 @@
+Many to Many: UserInfo and PaymentOptions
+create table user_info_tbl(user_id varchar2(15), first_name varchar2(30), last_name varchar2(30), middle_initial char(1), dob varchar2(10), email_id varchar2(30), constraint user_info_pk primary key (user_id));
+create table payments_tbl (payment_id number(10) primary key, payment_type char(3) NOT NULL);
+create table user_payments_tbl (user_id varchar2(15), payment_id number(10), constraint user_fk foreign key (user_id) references user_info_tbl(user_id), constraint payment_fk foreign key (payment_id) references payments_tbl(payment_id));
