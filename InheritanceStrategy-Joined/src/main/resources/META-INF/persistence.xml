@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="HibernatePersistence"
+		transaction-type="RESOURCE_LOCAL">
+		<description>Hibernate Persistence Unit</description>
+		<!-- <provider>com.objectdb.jpa.Provider</provider> -->
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<!-- <mapping-file>META-INF/mapping.xml</mapping-file> -->
+		<!-- <jar-file>packedEntity.jar</jar-file> -->
+		<class>com.jpa.entity.UserInfo</class>
+		<class>com.jpa.entity.PhysicalDelivery</class>
+		<class>com.jpa.entity.EmailDelivery</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+			<property name="javax.persistence.jdbc.user" value="system" />
+			<property name="javax.persistence.jdbc.password" value="Pulsor@150cc" />
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
+			<!-- <property name="hibernate.hbm2ddl.auto" value="update" /> -->
+			<!-- <property name="hibernate.default_schema" value="system" /> -->
+		</properties>
+	</persistence-unit>
+</persistence>
