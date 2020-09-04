@@ -1,0 +1,1 @@
+create table user_info_tbl(user_id varchar2(15), first_name varchar2(30), last_name varchar2(30), middle_initial char(1), dob varchar2(10), email_id varchar2(30), constraint user_info_pk primary key (user_id));
